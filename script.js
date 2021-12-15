@@ -3,9 +3,7 @@ const inputBox = document.querySelector(".inputField input");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 
-
-
-
+//input field
 inputBox.onkeyup = ()=>{
     let userData = inputBox.value;//getting user entered value
     if(userData.trim() !=0 ){ //if user values aren't only spaces
@@ -44,12 +42,6 @@ function showTasks(){
     }
     const pendingNumb = document.querySelector(".pendingNumb");
     pendingNumb.textContent = listArr.length;//giving the length value in pending tasks;
-    // if(listArr.length>0){//active clear all button 
-    //     deleteAllBtn.classList.add("active");
-    // }
-    // else{
-    //     deleteAllBtn.classList.remove("active");//unactive clear all button
-    // }
     let newLiTag='';
     listArr.forEach((element, index) => {
         newLiTag += `<li> ${element}<span onclick="deleteTask(${index})"; ><i class="fas fa-trash"></i></span></li>`;
